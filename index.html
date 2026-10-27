@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#012150">
+  <meta name="description" content="Dr. Tony Bustos. Conoce su perfil, consulta información sobre procedimientos y prepara tu primera consulta.">
+  <title>Dr. Tony Bustos | Inicio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/hero-img.jpg" fetchpriority="high">
+  <script src="hero-loading.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#inicio">Ir al contenido</a>
+    <header class="header">
+      <a class="brand" href="#inicio" aria-label="Dr. Tony Bustos, inicio"><img class="brand-logo" src="assets/dr-tony-bustos-logo.png" alt="Dr. Tony Bustos" width="681" height="313"></a>
+      <nav class="nav-pill" aria-label="Navegación principal">
+        <a href="#doctor">Dr. Tony Bustos</a>
+        <a href="#procedimientos" data-panel="procedimientos">Procedimientos</a>
+        <a href="#resultados" data-panel="resultados">Resultados</a>
+        <a href="#pacientes">Pacientes</a>
+      </nav>
+      <div class="header-actions">
+        <a class="appointment" href="#contacto">Agenda tu consulta</a>
+        <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-menu" id="site-menu" aria-label="Todas las secciones" hidden>
+        <a href="#inicio">Inicio</a>
+        <a href="#doctor">Dr. Tony Bustos <span>↗</span></a>
+        <a href="#procedimientos" data-panel="procedimientos">Procedimientos <span>↗</span></a>
+        <a href="#resultados" data-panel="resultados">Resultados <span>↗</span></a>
+        <a href="#pacientes">Pacientes <span>↗</span></a>
+        <a href="#contacto">Contacto <span>↗</span></a>
+        <a href="#articulos">Artículos <span>↗</span></a>
+      </nav>
+    </header>
+  <main>
+  <section id="inicio" class="hero" aria-label="Inicio">
+    <img class="hero-photo" src="assets/hero-img.jpg" alt="" fetchpriority="high" width="1920" height="1080">
+    <video class="hero-video" muted loop playsinline preload="auto" poster="assets/hero-img.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-bottom">
+      <div class="hero-copy">
+        <h1>Tu bienestar,<br>en buenas manos.</h1>
+        <p>Conoce al Dr. Tony Bustos y encuentra información<br class="desktop-break"> para dar el siguiente paso en tu cuidado.</p>
+      </div>
+      <a class="consult-card" href="#contacto">
+        <div class="card-top"><span>Tu primera consulta</span><span class="arrow" aria-hidden="true">↗</span></div>
+        <span class="card-label">DR. TONY BUSTOS</span>
+        <div class="card-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="card-text">Un espacio para hablar de ti.</span>
+        <span class="card-footer">Información de contacto <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+  <section id="doctor" class="credentials" aria-labelledby="credentials-title">
+    <div class="credentials-inner">
+      <div class="credentials-intro"><span>Dr. Tony Bustos · Trayectoria profesional</span></div>
+      <ul class="credential-strip" aria-label="Información profesional pendiente de confirmar">
+        <li><span class="credential-name">Formación</span><small>Institución por confirmar</small></li>
+        <li><span class="credential-name">Cédula profesional</span><small>Número por confirmar</small></li>
+        <li><span class="credential-name">Certificaciones</span><small>Documentación pendiente</small></li>
+        <li><span class="credential-name credential-acronym">AMCPER</span><small>Membresía por confirmar</small></li>
+        <li><span class="credential-name credential-acronym">CMCPER</span><small>Certificación por confirmar</small></li>
+      </ul>
+      <div class="credentials-grid">
+        <div class="credentials-copy">
+          <h2 id="credentials-title">Conoce la trayectoria<br>del Dr. Tony Bustos.</h2>
+          <div class="credentials-actions">
+            <a class="credential-button" href="#contacto">Agenda tu consulta <span aria-hidden="true">→</span></a>
+            <a class="credential-button credential-button-outline" href="#doctor" data-panel="doctor">Ver formación</a>
+          </div>
+          <div class="credentials-description">
+            <p><strong>Formación y experiencia.</strong> Un espacio para conocer la preparación académica y la trayectoria profesional del Dr. Tony Bustos.</p>
+            <p><strong>Credenciales profesionales.</strong> Consulta aquí su cédula, certificaciones e información sobre AMCPER y CMCPER cuando estén confirmadas.</p>
+          </div>
+        </div>
+        <article class="kpi-card kpi-experience" aria-labelledby="experience-title">
+          <h3 id="experience-title">Experiencia<br>en la práctica médica.</h3>
+          <div class="kpi-value" aria-label="Años de experiencia pendientes de confirmar">—<span>años de experiencia</span></div>
+          <p class="kpi-note">Cifra pendiente de confirmar.</p>
+          <a class="credential-button" href="#doctor" data-panel="doctor">Conoce su trayectoria <span aria-hidden="true">→</span></a>
+        </article>
+        <figure class="kpi-card kpi-certifications doctor-portrait">
+          <img src="assets/dr-tony-scrubs-embroidered.png" alt="Retrato del Dr. Tony Bustos con pijama quirúrgica azul marino" width="1122" height="1402" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <section class="credential-carousel" aria-label="Formación y credenciales" aria-roledescription="carrusel">
+        <svg class="credential-filter" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+          <defs><filter id="credential-ink" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -0.2126 -0.7152 -0.0722 0 1"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="emblem-white-red" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -4 0 4 0 0" result="white-emblem"/>
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
+            <feMerge><feMergeNode in="white-emblem"/><feMergeNode in="red-arrow"/></feMerge>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="emblem-navy-red" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -4 0 4 0 0" result="navy-emblem"/>
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
+            <feMerge><feMergeNode in="navy-emblem"/><feMergeNode in="red-arrow"/></feMerge>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="logo-original-transparent" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.3189 -1.0728 -0.1083 0 1.5"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="brand-transparent" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.25512 0.85824 0.08664 0 -0.2"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter></defs>
+        </svg>
+        <button class="credential-carousel-toggle sr-only" type="button" aria-pressed="false" aria-controls="credential-logo-track" hidden>Pausar movimiento</button>
+        <div class="credential-carousel-window">
+          <div class="credential-logo-track" id="credential-logo-track">
+            <ul class="credential-logo-group" aria-label="Instituciones">
+              <li><img src="assets/credential-tony-full.png" alt="Dr. Tony Bustos — Cirujano plástico estético y reconstructivo" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-amcper.png" alt="AMCPER" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-cmcper.png" alt="Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-hospital.png" alt="Hospital San Ángel Inn" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-asps.png" alt="American Society of Plastic Surgeons" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-japon.png" alt="Japón" width="180" height="120" loading="lazy"></li>
+              <li><img src="assets/credential-hospital-general.png" alt="Hospital General de México Dr. Eduardo Liceaga" width="180" height="120" loading="lazy"></li>
+              <li><img class="credential-logo-dark" src="assets/credential-emblema-naval.png" alt="Emblema naval: Ciencia, Humanismo y Lealtad" width="180" height="120" loading="lazy"></li>
+              <li><img class="credential-logo-checkered" src="assets/credential-consejo-mexicano.png" alt="Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva, A. C." width="180" height="120" loading="lazy"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section id="pacientes" class="faq" aria-labelledby="faq-title">
+    <div class="faq-inner">
+      <div class="faq-intro">
+        <h2 id="faq-title">Preguntas<br>frecuentes.</h2>
+        <p>Resuelve tus dudas antes de tu consulta<br class="faq-break"> con el Dr. Tony Bustos.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" name="patient-faq" open>
+          <summary>¿Qué puedo preguntar en mi primera consulta?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Puedes compartir tus objetivos y dudas con el Dr. Tony Bustos, y preguntar por las opciones, sus alcances, riesgos y cuidados. La consulta es el espacio para recibir información sobre tu caso antes de tomar una decisión.</p></div>
+        </details>
+        <details class="faq-item" name="patient-faq">
+          <summary>¿Cómo me preparo para un procedimiento?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Solicita al consultorio las indicaciones específicas para tu procedimiento y confirma cualquier duda con el Dr. Tony Bustos. La preparación se define de manera individual; esta página no sustituye esas instrucciones.</p></div>
+        </details>
+        <details class="faq-item" name="patient-faq">
+          <summary>¿Cuánto tiempo debo reservar para recuperarme?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Pregunta durante la valoración por el tiempo estimado de recuperación, el seguimiento y el regreso a tus actividades. No se establece un plazo único aquí: necesitarás una orientación específica para el procedimiento y tu situación.</p></div>
+        </details>
+        <details class="faq-item" name="patient-faq">
+          <summary>¿Cómo puedo agendar con el Dr. Tony Bustos?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer"><p>Consulta la ubicación en Hospital San Ángel Inn Universidad y el horario de atención, de lunes a viernes de 9:00 a. m. a 6:00 p. m., en la sección de contacto. El teléfono mostrado es provisional; la agenda telefónica estará disponible cuando se confirme el número del consultorio.</p><a href="#contacto">Ver información de contacto <span aria-hidden="true">↗</span></a></div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section id="articulos" class="articles" aria-labelledby="articles-title">
+    <div class="articles-inner">
+      <div class="articles-heading">
+        <h2 id="articles-title">Nuestros artículos.</h2>
+        <a class="articles-all" href="#articulos" data-panel="articulos">Ver todos</a>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card">
+          <a href="#articulo-consulta" data-panel="articulo-consulta" aria-labelledby="article-consulta-title">
+            <span class="article-photo article-photo-consulta" aria-hidden="true"></span>
+            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-consulta-title">Cómo preparar tus preguntas para la primera consulta</h3></div>
+          </a>
+        </article>
+        <article class="article-card">
+          <a href="#articulo-credenciales" data-panel="articulo-credenciales" aria-labelledby="article-credenciales-title">
+            <span class="article-photo article-photo-credenciales" aria-hidden="true"></span>
+            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-credenciales-title">Formación y credenciales: qué preguntar a tu médico</h3></div>
+          </a>
+        </article>
+        <article class="article-card">
+          <a href="#articulo-acompanamiento" data-panel="articulo-acompanamiento" aria-labelledby="article-acompanamiento-title">
+            <span class="article-photo article-photo-acompanamiento" aria-hidden="true"></span>
+            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-acompanamiento-title">Cómo organizar tus dudas y tu acompañamiento</h3></div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" class="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <p class="contact-eyebrow">DR. TONY BUSTOS</p>
+        <h2 id="contact-title">Contacto<br>y ubicación.</h2>
+        <p class="contact-intro">Da el siguiente paso.<br>Conoce dónde encontrarnos.</p>
+        <dl class="contact-details">
+          <div><dt>Ubicación</dt><dd>Hospital San Ángel Inn Universidad</dd></div>
+          <div><dt>Horario de atención</dt><dd>Lunes a viernes<br><span>9:00 a. m. a 6:00 p. m.</span></dd></div>
+          <div><dt>Teléfono</dt><dd><span class="contact-phone">55 0000 0000</span><small>Número provisional · No habilitado para llamadas</small></dd></div>
+        </dl>
+        <a class="contact-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20San%20%C3%81ngel%20Inn%20Universidad" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span><span class="sr-only"> (abre Google Maps en otra pestaña)</span></a>
+        <p class="contact-appointment-note">La agenda telefónica estará disponible cuando se confirme el número del consultorio.</p>
+      </div>
+      <div class="contact-map">
+        <iframe title="Ubicación de Hospital San Ángel Inn Universidad en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30112.773170212215!2d-99.18317764667975!3d19.364967483963543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc02630ca59%3A0xecc9a8d0ed644d36!2sHospital%20San%20%C3%81ngel%20Inn%20Universidad!5e0!3m2!1ses-419!2smx!4v1792884330136!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="footer-panel">
+      <div class="footer-top">
+        <a class="brand footer-brand footer-brand-pair" href="#inicio" aria-label="Dr. Tony Bustos, volver al inicio">
+          <img class="footer-wordmark" src="assets/footer-tony-wordmark.png" alt="Dr. Tony Bustos" width="255" height="111" loading="lazy">
+          <span class="footer-brand-divider" aria-hidden="true"></span>
+          <span class="footer-seal">
+            <img src="assets/footer-tony-seal-white.png" alt="Emblema del Dr. Tony Bustos con flecha roja" width="462" height="388" loading="lazy">
+            <svg class="footer-seal-arrow" viewBox="0 0 462 388" aria-hidden="true"><path fill="#E63950" d="M241 154 268 231 241 196 213 231Z"/></svg>
+          </span>
+        </a>
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <a href="#doctor">El doctor</a>
+          <a href="#procedimientos" data-panel="procedimientos">Procedimientos</a>
+          <a href="#pacientes">Pacientes</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+      <div class="footer-body">
+        <div class="footer-intro">
+          <p>Tu bienestar,<br>en buenas manos.</p>
+          <span>Información clara y atención cercana<br>para dar el siguiente paso en tu cuidado.</span>
+          <a class="footer-about" href="#doctor"><span aria-hidden="true">↗</span> Conoce al Dr. Tony Bustos</a>
+        </div>
+        <div class="footer-details">
+          <div>
+            <h2>Hablemos de ti</h2>
+            <p>Lunes a viernes<br>9:00 a. m. a 6:00 p. m.</p>
+            <a class="footer-text-link" href="#contacto">Información de contacto <span aria-hidden="true">↗</span></a>
+          </div>
+          <div>
+            <h2>Encuéntranos</h2>
+            <address>Hospital San Ángel Inn Universidad</address>
+            <a class="footer-text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20San%20%C3%81ngel%20Inn%20Universidad" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span><span class="sr-only"> (abre Google Maps en otra pestaña)</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Dr. Tony Bustos.<br>Todos los derechos reservados.</p>
+        <a class="footer-articles" href="#articulos">Explora nuestros artículos <span aria-hidden="true">↗</span></a>
+        <a class="footer-top-link" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title">
+    <button class="close-dialog" type="button" aria-label="Cerrar">×</button>
+    <p class="eyebrow">DR. TONY BUSTOS</p>
+    <h2 id="dialog-title"></h2>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>

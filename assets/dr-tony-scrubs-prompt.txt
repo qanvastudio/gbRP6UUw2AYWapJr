@@ -1,0 +1,5 @@
+Tool: built-in image_gen, image edit (identity-preserve).
+Source: user-provided portrait of Dr. Tony Bustos.
+Output: dr-tony-scrubs.png
+
+Use case: identity-preserve. Edit target: the supplied photograph of Dr. Tony. Create a polished photorealistic vertical rectangular professional portrait for a medical website card, approximately 4:5 aspect ratio. Preserve this exact man's facial identity, facial proportions, age, skin tone, slicked-back dark hair, neutral expression, gaze toward viewer's left, and torso pose. Replace the entire suit, vest and white shirt with realistic clean navy blue surgical scrubs, short sleeves and a modest V-neck. No white coat, no stethoscope, no badges, no invented embroidery. Improve clarity, noise and natural soft lighting while retaining real skin texture; no beauty-filter face changes. Replace the event-branded background and black circular frame with a clean pale cool gray-blue studio background filling the entire rectangular image. Head fully visible with comfortable headroom, shoulders and torso through waist, centered for a narrow tall card crop. No circle, no border, no text, no logos. Face fidelity is the highest priority.
