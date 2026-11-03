@@ -21,8 +21,25 @@ El video se solicita después de cargar la portada, excepto con ahorro de datos,
 
 ## Verificación
 
+La trayectoria se consulta en `trayectoria.html` desde «Conoce su trayectoria». `timeline-data.js` reúne los 64 registros del CV y los 13 hitos adicionales (77 en total), ordenados por año inicial; el reconocimiento sin fecha aparece al final. Los títulos destacan la formación, participación y responsabilidades indicadas, sin añadir certificaciones. `timeline.css` y `timeline.js` dibujan una sola línea curva continua en azul principal (#012150), con bandas translúcidas sobre fondo claro. Los hitos se agrupan bajo encabezados de año y cada uno conserva su nodo. Un carril exclusivo separa la línea de los textos y detalles, tanto en escritorio como en móvil. Todos los detalles permanecen visibles y cada hito conserva su nodo.
+
+- `node scripts/verify-timeline.cjs` (77 registros visibles, agrupación anual, colores únicos y trazado de la línea)
+
 - `node scripts/verify-loading.cjs`
 - `node --check app.js`
 - `node --check hero-loading.js`
 
 La verificación comprueba lógica de carga y referencias locales. No mide tiempos reales de red ni sustituye una revisión visual en navegador.
+
+## Páginas de contenido
+
+Los modales se sustituyeron por navegación HTML normal. La página principal es `index.html`; el resto comparte el encabezado, los filtros de transparencia de los logos, la navegación y el pie de página. `pages.css` define la distribución adaptable de las páginas internas.
+
+- `doctor.html`: formación y acceso a trayectoria.
+- `trayectoria.html`: línea de tiempo completa con los 77 hitos visibles.
+- `procedimientos.html` y `resultados.html`: información disponible y estado del contenido pendiente.
+- `pacientes.html`: orientación y acceso a preguntas frecuentes.
+- `articulos.html`: índice de artículos.
+- `articulo-consulta.html`, `articulo-credenciales.html` y `articulo-acompanamiento.html`: lecturas individuales.
+
+Las páginas internas no cargan el video del Hero. Su encabezado azul mantiene el contraste desde el inicio; incluyen rutas de navegación y accesos a contenido relacionado y contacto. Los archivos HTML pueden abrirse directamente desde el disco.

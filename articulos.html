@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#012150">
+<meta name="description" content="Todos los artículos · Dr. Tony Bustos">
+<title>Todos los artículos | Dr. Tony Bustos</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+<script src="app.js" defer></script>
+
+</head>
+<body class="subpage">
+<a class="skip" href="#contenido">Ir al contenido</a>
+<svg class="credential-filter" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+          <defs><filter id="credential-ink" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -0.2126 -0.7152 -0.0722 0 1"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="emblem-white-red" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -4 0 4 0 0" result="white-emblem"/>
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
+            <feMerge><feMergeNode in="white-emblem"/><feMergeNode in="red-arrow"/></feMerge>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="emblem-navy-red" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -4 0 4 0 0" result="navy-emblem"/>
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
+            <feMerge><feMergeNode in="navy-emblem"/><feMergeNode in="red-arrow"/></feMerge>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="logo-original-transparent" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.3189 -1.0728 -0.1083 0 1.5"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter>
+          <filter id="brand-transparent" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.25512 0.85824 0.08664 0 -0.2"/>
+            <feComposite in2="SourceGraphic" operator="in"/>
+          </filter></defs>
+        </svg>
+<header class="header">
+      <a class="brand" href="index.html" aria-label="Dr. Tony Bustos, inicio"><img class="brand-logo" src="assets/dr-tony-bustos-logo.webp" alt="Dr. Tony Bustos" width="681" height="313"></a>
+      <nav class="nav-pill" aria-label="Navegación principal">
+        <a href="doctor.html">Dr. Tony Bustos</a>
+        <a href="procedimientos.html">Procedimientos</a>
+        <a href="resultados.html">Resultados</a>
+        <a href="pacientes.html">Pacientes</a>
+      </nav>
+      <div class="header-actions">
+        <a class="appointment" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
+        <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-menu" id="site-menu" aria-label="Todas las secciones" hidden>
+        <a href="index.html">Inicio</a>
+        <a href="doctor.html">Dr. Tony Bustos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="procedimientos.html">Procedimientos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="resultados.html">Resultados <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="pacientes.html">Pacientes <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="index.html#contacto">Contacto <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="articulos.html">Artículos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+      </nav>
+    </header>
+<main id="contenido" class="page-main">
+<nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Todos los artículos</span></nav>
+<header class="page-heading"><p class="eyebrow">DR. TONY BUSTOS</p><h1>Todos los artículos</h1><p class="page-lead">Lecturas para preparar tu conversación con el Dr. Tony Bustos.</p><a class="page-text-link" href="index.html">← Volver al inicio</a></header><div class="page-article-grid"><a class="page-article" href="articulo-consulta.html"><img src="assets/article-1.webp" alt="" width="640" height="640" loading="lazy"><div><span class="page-tag">Borrador editorial</span><h2>Cómo preparar tus preguntas para la primera consulta</h2><span>Leer artículo →</span></div></a><a class="page-article" href="articulo-credenciales.html"><img src="assets/article-2.webp" alt="" width="640" height="640" loading="lazy"><div><span class="page-tag">Borrador editorial</span><h2>Formación y credenciales: qué preguntar a tu médico</h2><span>Leer artículo →</span></div></a><a class="page-article" href="articulo-acompanamiento.html"><img src="assets/article-3.webp" alt="" width="640" height="640" loading="lazy"><div><span class="page-tag">Borrador editorial</span><h2>Cómo organizar tus dudas y tu acompañamiento</h2><span>Leer artículo →</span></div></a></div>
+</main>
+<footer class="site-footer" aria-label="Pie de página">
+    <div class="footer-panel">
+      <div class="footer-top">
+        <a class="brand footer-brand footer-brand-pair" href="index.html" aria-label="Dr. Tony Bustos, volver al inicio">
+          <img class="footer-wordmark" src="assets/footer-tony-wordmark.webp" alt="Dr. Tony Bustos" width="255" height="111" loading="lazy">
+          <span class="footer-brand-divider" aria-hidden="true"></span>
+          <span class="footer-seal">
+            <img src="assets/footer-tony-seal-white.webp" alt="Emblema del Dr. Tony Bustos con flecha roja" width="462" height="388" loading="lazy">
+            <svg class="footer-seal-arrow" viewBox="0 0 462 388" aria-hidden="true"><path fill="#E63950" d="M241 154 268 231 241 196 213 231Z"/></svg>
+          </span>
+        </a>
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <a href="doctor.html">Dr. Tony Bustos</a>
+          <a href="procedimientos.html">Procedimientos</a>
+          <a href="pacientes.html">Pacientes</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
+      <div class="footer-body">
+        <div class="footer-intro">
+          <p>Tu bienestar,<br>en buenas manos.</p>
+          <span>Información clara y atención cercana<br>para dar el siguiente paso en tu cuidado.</span>
+          <a class="footer-about" href="doctor.html"><span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span> Conoce al Dr. Tony Bustos</a>
+        </div>
+        <div class="footer-details">
+          <div>
+            <h2>Hablemos de ti</h2>
+            <p>Lunes a viernes<br>9:00 a. m. a 6:00 p. m.</p>
+            <a class="footer-text-link" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">Agendar Consulta <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+          </div>
+          <div>
+            <h2>Encuéntranos</h2>
+            <address>Hospital San Ángel Inn Universidad</address>
+            <a class="footer-text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20San%20%C3%81ngel%20Inn%20Universidad" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span><span class="sr-only"> (abre Google Maps en otra pestaña)</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Dr. Tony Bustos.<br>Todos los derechos reservados.</p>
+        <a class="footer-articles" href="articulos.html">Explora nuestros artículos <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a class="footer-top-link" href="index.html">Volver al inicio <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
