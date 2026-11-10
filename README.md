@@ -37,7 +37,9 @@ Los modales se sustituyeron por navegación HTML normal. La página principal es
 
 - `doctor.html`: formación y acceso a trayectoria.
 - `trayectoria.html`: línea de tiempo completa con los 77 hitos visibles.
-- `procedimientos.html` y `resultados.html`: información disponible y estado del contenido pendiente.
+- `procedimientos.html`: catálogo de 69 elementos en siete categorías, con búsqueda, filtros por color y esferas animadas. El contenido permanece visible sin JavaScript. `procedimientos-data.js` contiene los nombres y descripciones; ejecutar `node scripts/build-procedures.cjs` después de editarlo para regenerar el HTML. `procedimientos.css` y `procedimientos.js` controlan la presentación y los filtros; el movimiento respeta la preferencia de movimiento reducido y puede pausarse.
+- `resultados.html`: estado del contenido pendiente.
+- Las seis tarjetas principales de Procedimientos se editan en `procedimientos-featured.cjs` y se regeneran con el mismo comando. Usan fotografías provisionales de `assets/article-*.webp`; reemplazar su campo `image` cuando lleguen las fotografías definitivas. Al seleccionarlas muestran descripción y un enlace de WhatsApp con el nombre del procedimiento. La apertura funciona con ratón, toque y teclado mediante `details`/`summary`, también sin JavaScript. El número de destino es el mismo que usa el resto del sitio.
 - `pacientes.html`: orientación y acceso a preguntas frecuentes.
 - `articulos.html`: índice de artículos.
 - `articulo-consulta.html`, `articulo-credenciales.html` y `articulo-acompanamiento.html`: lecturas individuales.

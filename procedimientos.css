@@ -1,0 +1,99 @@
+.procedures-page{background:#fbfcfe!important}
+.procedures-page .page-main{max-width:1320px}
+/* Content sections must not inherit the homepage's full-screen minimum height. */
+.procedures-page .page-main > section{min-height:0}
+.procedures-page .page-heading{margin-bottom:34px}
+.procedures-page .page-heading h1{margin-bottom:18px}
+.featured-procedures{margin:46px 0 40px}
+.featured-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:25px}
+.featured-heading .eyebrow,.catalog-heading .eyebrow{margin:0 0 12px}
+.featured-heading h2,.catalog-heading h2{font-size:clamp(24px,2.6vw,34px);font-weight:400;letter-spacing:-1px;line-height:1.2;margin:0}
+.featured-heading>p{color:#68768a;font-size:13px;line-height:1.6;margin:0;flex-shrink:0}
+.featured-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:start;gap:12px}
+.featured-procedure{background:#fff;border:1px solid #e1e7ee;border-radius:20px;padding:5px;box-shadow:0 8px 25px #01215007;overflow:hidden;min-width:0;transition:box-shadow .3s,border-color .3s}
+.featured-procedure:hover,.featured-procedure[open]{border-color:#b5c9e0;box-shadow:0 14px 35px #01215012}
+.featured-procedure{position:relative}
+.featured-procedure summary{position:relative;list-style:none;cursor:pointer;border-radius:15px;outline-offset:-4px}
+.featured-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none}
+.featured-video.has-frame{opacity:1}
+.featured-procedure summary::-webkit-details-marker{display:none}
+.featured-procedure summary:focus-visible{outline:3px solid #8fc5ff}
+.featured-photo{display:block;position:relative;height:260px;overflow:hidden;border-radius:15px;background:#dce7f3;transition:height .5s cubic-bezier(.22,.61,.36,1)}
+.featured-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+#mommy-makeover .featured-photo,#control-peso .featured-photo{background:#fff}
+#mommy-makeover .featured-photo img,#control-peso .featured-photo img{object-position:center top;transform-origin:center top;transform:translateY(8px) scale(2.15)}
+#mommy-makeover:not([open]):hover .featured-photo img,#control-peso:not([open]):hover .featured-photo img{transform:translateY(8px) scale(2.225)}
+#morpheus-co2 .featured-photo img{object-position:center 35%}
+#rinoseptumplastia .featured-photo img{object-position:70% center;transform:scaleX(-1)}
+#rinoseptumplastia:not([open]):hover .featured-photo img{transform:scaleX(-1) scale(1.035)}
+.featured-procedure:not([open]):hover .featured-photo img{transform:scale(1.035)}
+.featured-photo::after{content:'';position:absolute;inset:0;background:rgb(1 33 80 / 45%);transition:background .4s}
+.featured-caption{position:absolute;bottom:18px;left:12px;right:12px;color:#fff;text-shadow:0 1px 8px #01215099}
+.featured-caption h3{font-size:17px;line-height:1.2;letter-spacing:-.4px;font-weight:500;margin:0;overflow-wrap:break-word}
+.featured-toggle{position:absolute;right:11px;top:11px;display:grid;place-items:center;width:28px;height:28px;border:1px solid #ffffff70;border-radius:50%;color:#fff;background:#01215099}
+.featured-toggle::before,.featured-toggle::after{content:'';position:absolute;width:10px;height:1px;background:currentColor;transition:transform .3s}
+.featured-toggle::after{transform:rotate(90deg)}
+.featured-procedure[open] .featured-photo{height:125px}
+.featured-procedure[open] .featured-caption{position:relative;inset:auto;display:block;color:#012150;padding:13px 10px 0;text-shadow:none}
+.featured-procedure[open] .featured-caption h3{font-size:16px}
+.featured-procedure[open] .featured-toggle::after{transform:rotate(0)}
+ .featured-info{padding:0 10px 10px;animation:featured-reveal .35s ease both}
+.featured-info>p{font-size:12px;line-height:1.6;color:#607187;margin:11px 0 13px}
+.featured-whatsapp{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#012150;color:#fff;padding:11px 10px;border-radius:11px;font-size:11px;transition:background .2s}
+.featured-whatsapp:hover{background:#224c7f}
+.featured-whatsapp svg{width:18px;height:18px;flex-shrink:0}
+
+@keyframes featured-reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){.featured-grid{grid-template-columns:repeat(6,180px);overflow-x:auto;padding:3px 3px 16px;scroll-snap-type:x proximity}.featured-procedure{scroll-snap-align:start}}
+@media(max-width:600px){.featured-procedures{margin:35px 0 32px}.featured-heading{align-items:flex-start;flex-direction:column;gap:12px}.featured-heading>p br{display:none}.featured-grid{gap:12px}}
+@media(prefers-reduced-motion:reduce){.featured-procedure,.featured-photo,.featured-photo img,.featured-photo::after,.featured-toggle::before,.featured-toggle::after,.featured-whatsapp{transition:none}.featured-info{animation:none}}
+.procedures-page [hidden]{display:none!important}
+[data-category="facial"]{--tone:#3d6aa1;--light:#d5e7fb;--deep:#153a70}
+[data-category="mamaria"]{--tone:#a84f77;--light:#f6dce7;--deep:#703451}
+[data-category="corporal"]{--tone:#377c70;--light:#d2eee5;--deep:#20564a}
+[data-category="no-quirurgicos"]{--tone:#8161ad;--light:#e9dff8;--deep:#513770}
+[data-category="reconstructiva"]{--tone:#9a682c;--light:#f5e6cb;--deep:#735024}
+[data-category="intima"]{--tone:#ae6254;--light:#f8dfd6;--deep:#793e35}
+[data-category="adicionales"]{--tone:#3c7f96;--light:#d4edf5;--deep:#24586d}
+.catalog-search-row{display:flex;gap:12px;align-items:stretch}
+.procedure-search{display:flex;align-items:center;gap:12px;border:1px solid #c5cfdb;background:#fff;border-radius:13px;padding:0 17px;flex:1;min-width:0}
+.procedure-search:focus-within{outline:2px solid #6999cc;outline-offset:3px}
+.procedure-search svg{width:21px;height:21px;flex-shrink:0;color:#718096}
+.procedure-search input{border:0;outline:0;min-width:0;width:100%;padding:17px 0;background:transparent;font:inherit;font-size:14px;color:#012150}
+.procedure-search input::placeholder{color:#728096}
+.category-filter{border:1px solid #dce2e9;background:#fff;border-radius:12px;color:#4a5b70;cursor:pointer;font-size:12px;padding:12px 14px}
+
+.category-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.category-filter{display:flex;align-items:center;gap:8px;line-height:1.4;transition:background .2s,border-color .2s}
+.category-dot{width:8px;height:8px;border-radius:50%;background:var(--tone);flex-shrink:0}
+.category-filter:hover,.category-filter[aria-pressed="true"]{background:var(--light,#e3edfa);border-color:var(--tone,#012150);color:var(--deep,#012150)}
+.catalog-status{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:54px;font-size:12px;color:#68788c}
+.catalog-status p{margin:12px 0}
+#clear-filters{border:0;background:transparent;color:#265d96;cursor:pointer;font-size:12px;padding:10px 0}
+.procedure-group{padding:22px 0 30px;border-top:1px solid #e4e9f0}
+.procedure-group-heading{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.procedure-group-heading h2{margin:0;font-size:18px;letter-spacing:-.4px;font-weight:500;display:flex;align-items:center;gap:10px}
+.procedure-group-heading h2::before{content:'';width:7px;height:7px;background:var(--tone);border-radius:50%;flex-shrink:0}
+.group-count{font-size:11px;color:#758295}
+.procedure-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:30px;row-gap:24px}
+.procedure-item{display:flex;align-items:flex-start;gap:13px;min-width:0;padding:5px 0}
+.procedure-item h3{font-size:14px;font-weight:600;line-height:1.5;margin:1px 0 5px;letter-spacing:-.15px}
+.procedure-item p{font-size:12px;line-height:1.65;color:#68768a;margin:0}
+.orb-tile{display:grid;place-items:center;flex:0 0 66px;height:66px;background:#f0f2f5;border-radius:17px}
+.procedure-orb{display:block;position:relative;isolation:isolate;overflow:hidden;width:37px;height:37px;border-radius:50%;background:var(--deep);box-shadow:inset -5px -6px 9px #00152f50,0 2px 5px #01215012}
+.procedure-orb::before,.procedure-orb::after{content:'';position:absolute;inset:-35%;pointer-events:none;animation-delay:var(--delay);animation-play-state:paused}
+.procedure-orb::before{background:radial-gradient(ellipse at 25% 30%,var(--light) 0%,var(--tone) 28%,transparent 59%),radial-gradient(ellipse at 75% 80%,var(--tone) 0%,transparent 56%);filter:blur(2px);animation:consult-lava-one 7s ease-in-out infinite alternate;animation-delay:var(--delay)}
+.procedure-orb::after{background:radial-gradient(ellipse at 65% 25%,#ffffffd9 0%,var(--light) 15%,transparent 48%);filter:blur(3px);mix-blend-mode:screen;animation:consult-lava-two 9s ease-in-out infinite alternate;animation-delay:var(--delay)}
+.procedure-group:not(.is-visible) .procedure-orb::before,.procedure-group:not(.is-visible) .procedure-orb::after{animation-play-state:paused}
+.catalog-empty{text-align:center;padding:60px 20px;background:#f0f5fb;border-radius:18px;color:#476587}
+.catalog-empty h2{font-size:22px;color:#012150;font-weight:500}
+.catalog-empty p{font-size:14px;line-height:1.7}
+.catalog-empty button{padding:12px 18px;border:0;border-radius:25px;background:#012150;color:white;cursor:pointer;margin-top:12px}
+.procedure-consult{display:flex;align-items:center;justify-content:space-between;gap:32px;background:#e8f0fa;border-radius:22px;padding:36px;margin-top:25px}
+.procedure-consult h2{font-size:26px;font-weight:400;letter-spacing:-.8px;margin:12px 0}
+.procedure-consult p:not(.eyebrow){font-size:14px;color:#476587;line-height:1.7;margin-bottom:0}
+.procedure-consult .credential-button{flex-shrink:0}
+@media(min-width:1500px){.procedures-page .page-main{max-width:1420px}}
+@media(max-width:1000px){.procedure-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:25px}.procedure-consult{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.procedures-page .page-main{padding-inline:6%}.procedure-grid{grid-template-columns:1fr;gap:18px}.catalog-search-row{flex-wrap:wrap}.procedure-search{flex-basis:100%}.category-filter{font-size:11px;padding:10px}.category-filters{gap:7px;margin-top:12px}.procedure-group-heading{align-items:flex-start;flex-direction:column;gap:7px}.group-count{padding-left:17px}.procedure-group{padding-block:22px}.procedure-consult{padding:25px}.procedure-consult h2{font-size:25px}.orb-tile{flex-basis:62px;height:62px}.procedure-search input{font-size:12px}.procedure-item p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.procedure-orb::before,.procedure-orb::after{animation:none}}
