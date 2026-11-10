@@ -583,7 +583,7 @@ window.trajectoryItems = [
     "year": null,
     "date": "Sin fecha",
     "title": "Cédula profesional",
-    "text": "Cédula profesional: 4784686."
+    "text": "Cédula profesional: **686."
   },
   {
     "id": "formation-5",
@@ -611,7 +611,7 @@ window.trajectoryItems = [
     "year": null,
     "date": "Sin fecha",
     "title": "Cédula de especialidad",
-    "text": "Cédula de especialidad: 9940991."
+    "text": "Cédula de especialidad: **991."
   },
   {
     "id": "formation-9",

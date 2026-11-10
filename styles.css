@@ -322,6 +322,7 @@ main > section.hero{padding-top:var(--site-header-height);scroll-margin-top:0}
 /* Vector arrows never depend on emoji fonts. */
 .icon-arrow-up-right{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex-shrink:0}
 
+.credential-verified{display:inline-block;width:16px;height:16px;margin-left:6px;vertical-align:-3px;object-fit:contain;flex-shrink:0}
 /* Light blue lava effect: soft fields move beneath the card content. */
 .consult-card{
   isolation:isolate;

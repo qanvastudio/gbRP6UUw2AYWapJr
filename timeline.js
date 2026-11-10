@@ -75,6 +75,9 @@
     const button=document.createElement('div');button.className='journey-label';
     const title=document.createElement('span');title.className='journey-title';title.textContent=item.title;button.append(title);
     const detail=document.createElement('p');detail.className='journey-detail';detail.id='journey-detail-'+item.id;detail.hidden=false;detail.textContent=item.text;
+    if(/^Cédula (profesional|de especialidad)$/.test(item.title)){
+     const badge=document.createElement('img');badge.className='credential-verified';badge.src='assets/credential-verified.svg';badge.alt='Verificado';badge.width=16;badge.height=16;detail.append(badge);
+    }
     copy.append(button,detail);
     if(item.image){
      const figure=document.createElement('figure');figure.className='journey-photo';
