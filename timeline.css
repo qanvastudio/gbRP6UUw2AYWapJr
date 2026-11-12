@@ -61,3 +61,7 @@
 .journey-photo{margin:18px 0 0;padding:10px;border-radius:16px;background:#e2eeff;text-align:left}
 .journey-photo img{display:block;width:100%;height:auto;border-radius:9px}
 .journey-photo figcaption{padding:9px 3px 2px;font-size:11px;line-height:1.5;color:#254d74}
+.trajectory-static{list-style:none;padding:0;display:grid;gap:24px;color:#365775}
+.trajectory-static li{border-bottom:1px solid #cddef2;padding-bottom:20px}
+.trajectory-static h2{font-size:18px;color:#012150;line-height:1.4;margin:0 0 8px}
+.trajectory-static p{line-height:1.65;margin:0}

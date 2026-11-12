@@ -1,6 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { root, siteFiles } = require('./site-files.cjs');
+// Regenerate metadata and validate it before every deployment package.
+require('./build-seo.cjs');
+require('./verify-seo.cjs');
 const output = path.join(root, 'dist');
 const files = siteFiles();
 fs.mkdirSync(output, { recursive: true });

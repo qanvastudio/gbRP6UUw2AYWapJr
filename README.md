@@ -25,6 +25,8 @@ Los videos de procedimientos se solicitan al entrar en pantalla. Se conserva la 
 Ejecutar desde la raíz:
 
 ```powershell
+node scripts/build-seo.cjs
+node scripts/verify-seo.cjs
 node scripts/verify-site.cjs
 node scripts/verify-loading.cjs
 node scripts/verify-procedure-video.cjs
@@ -32,8 +34,13 @@ node scripts/verify-timeline.cjs
 node scripts/build-production.cjs
 ```
 
-Publicar exclusivamente el contenido de `dist/` en la raíz del alojamiento estático. El empaquetado incluye únicamente archivos alcanzables desde las páginas HTML; excluye originales, scripts, documentación y metadatos Git. Rechaza archivos sobrantes de compilaciones anteriores para evitar publicarlos accidentalmente.
+Publicar exclusivamente el contenido de `dist/` en la raíz del alojamiento estático. El empaquetado incluye recursos alcanzables desde las páginas HTML y los archivos públicos de SEO y GitHub Pages; excluye originales, scripts, documentación y metadatos Git. Rechaza archivos sobrantes de compilaciones anteriores para evitar publicarlos accidentalmente.
 
 El alojamiento debe servir HTML, CSS, JavaScript, imágenes y MP4 con sus tipos de contenido correctos, admitir solicitudes parciales de video y HTTPS. Evitar caché permanente de HTML o de recursos con nombres reutilizados. La configuración concreta depende del proveedor.
 
-Las comprobaciones automatizadas cubren recursos, enlaces locales y anclas, metadatos básicos, imágenes, carga y trayectoria. No sustituyen una prueba visual ni una prueba de red en dispositivos reales. Antes de publicar, revisar `dist/` mediante un servidor HTTP en escritorio y móvil; después comprobar el dominio final y sus enlaces. No hay alojamiento ni dominio de producción configurados en este proyecto.
+Las comprobaciones automatizadas cubren recursos, enlaces locales y anclas, metadatos básicos, imágenes, carga y trayectoria. No sustituyen una prueba visual ni una prueba de red en dispositivos reales. Antes de publicar, revisar `dist/` mediante un servidor HTTP en escritorio y móvil; después comprobar el dominio final y sus enlaces. El dominio previsto es https://drtonybustos.com.mx y el alojamiento es GitHub Pages. La activación del dominio, HTTPS y Search Console se documenta en SEO.md; no se ha publicado desde esta tarea.
+
+## SEO
+
+Consultar [SEO.md](SEO.md) para configuración, búsquedas objetivo y pasos de publicación. Los metadatos se editan en seo.config.cjs. El sitemap, robots y las URL canónicas se regeneran automáticamente al preparar producción.
+

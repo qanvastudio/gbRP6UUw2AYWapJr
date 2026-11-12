@@ -3,6 +3,10 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 function siteFiles() {
   const files = new Set(fs.readdirSync(root).filter(name => name.endsWith('.html')));
+  for (const file of ['sitemap.xml', 'robots.txt', 'CNAME', '.nojekyll']) {
+    if (!fs.existsSync(path.join(root, file))) throw Error(`Missing deployment file: ${file}. Run scripts/build-seo.cjs.`);
+    files.add(file);
+  }
   const queue = [...files];
   for (const file of queue) {
     if (!/\.(html|css|js)$/.test(file)) continue;

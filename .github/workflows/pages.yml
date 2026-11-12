@@ -1,0 +1,50 @@
+name: Publish portal to GitHub Pages
+
+# Publication is manual. Pushes and pull requests never deploy this site.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Generate catalog and SEO
+        run: |
+          node scripts/build-procedures.cjs
+          node scripts/build-seo.cjs
+      - name: Verify portal
+        run: |
+          node scripts/verify-site.cjs
+          node scripts/verify-seo.cjs
+          node scripts/verify-loading.cjs
+          node scripts/verify-procedure-video.cjs
+          node scripts/verify-timeline.cjs
+      - name: Build public files only
+        run: node scripts/build-production.cjs
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
