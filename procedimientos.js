@@ -51,7 +51,7 @@
     video.muted = true;
     async function sync() {
       const current = ++attempt;
-      if (!visible || document.hidden || reduced.matches || navigator.connection?.saveData) { video.pause(); return; }
+      if (!visible || document.hidden || reduced.matches || navigator.connection?.saveData || /(^|-)2g|3g/.test(navigator.connection?.effectiveType || '')) { video.pause(); return; }
       if (!video.getAttribute('src')) video.src = mobile.matches ? video.dataset.mobile : video.dataset.desktop;
       try {
         await video.play();
@@ -62,10 +62,10 @@
     video.addEventListener('error', () => { video.classList.remove('has-frame'); video.pause(); });
     document.addEventListener('visibilitychange', sync);
     reduced.addEventListener('change', sync);
-    navigator.connection?.addEventListener('change', sync);
+    navigator.connection?.addEventListener?.('change', sync);
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
-        visible = entries[0].isIntersecting;
+        visible = entries[0].isIntersecting && entries[0].intersectionRatio >= 0.1;
         sync();
       }, { threshold: 0.1 });
       observer.observe(card);

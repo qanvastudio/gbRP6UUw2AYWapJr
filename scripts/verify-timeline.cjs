@@ -15,31 +15,42 @@ vm.createContext(context);vm.runInContext(fs.readFileSync('timeline-data.js','ut
 
 const items=context.window.trajectoryItems;
 const select=container.querySelector('select');
-const years=[...new Set(items.map(item=>item.year))].sort((a,b)=>b-a);
-assert.equal(Number(select.value),years[0]);
-assert.deepEqual(select.children.map(option=>option.value),years.map(String));
-assert.equal(container.querySelectorAll('.journey-event').length,items.filter(item=>item.year===years[0]).length);
+const groupYear=item=>item.year===null||item.year<2010?2009:item.year;
+const years=[...new Set(items.map(groupYear))].sort((a,b)=>b-a);
+assert.equal(select.value,'all');
+assert.deepEqual(select.children.map(option=>option.value),['all',...years.map(String)]);
+assert.equal(container.querySelectorAll('.journey-event').length,items.length);
 assert.equal(container.beforeNode,undefined);
 const colors=[];
 for(const year of years){
  select.value=String(year);select.events.change();
- assert.equal(container.querySelectorAll('.journey-event').length,items.filter(item=>item.year===year).length);
+ assert.equal(container.querySelectorAll('.journey-event').length,items.filter(item=>groupYear(item)===year).length);
  assert.equal(container.querySelectorAll('.journey-year').length,1);
- assert.equal(container.querySelector('h3').querySelector('select'),select);
+ assert.equal(container.querySelector('.journey-year-picker').querySelector('select'),select);
  assert(container.querySelectorAll('.journey-detail').every(detail=>!detail.hidden));
  assert(container.querySelector('path').getAttribute('d').length>0);
  colors.push(container.querySelector('stop').getAttribute('stop-color'));
 }
 assert.equal(new Set(colors).size,years.length);
-console.log('PASS: latest year initially, descending year options, embedded year selector, every filter, unique colors and expanded details.');
+console.log('PASS: all years initially, descending year options, shared year selector, every filter, unique colors and expanded details.');
 
 const picker=container.querySelector('.journey-year-picker');
 const choices=picker.querySelectorAll('button');
-assert.equal(choices.length,years.length);
+assert.equal(choices.length,years.length+1);
 choices[0].events.click();
-assert.equal(select.value,String(years[0]));
+assert.equal(select.value,'all');
+assert.equal(container.querySelectorAll('.journey-event').length,items.length);
+assert.equal(container.querySelectorAll('.journey-year').length,years.length);
+assert.equal(container.querySelectorAll('.journey-year-picker').length,1);
 assert.equal(picker.open,false);
 assert.equal(choices[0].getAttribute('aria-current'),'true');
 picker.open=true;picker.events.keydown({key:'Escape'});assert.equal(picker.open,false);
 assert(select.hidden);
 console.log('PASS: custom year choices select correctly, active state, Escape closes and native select hidden.');
+
+const early=choices.find(choice=>choice.textContent==='< 2010');assert(early);early.events.click();
+assert.equal(container.querySelector('.journey-year-trigger').textContent,'< 2010');
+const expected=items.filter(item=>item.year===null||item.year<2010).map(item=>'journey-detail-'+item.id).sort();
+assert.deepEqual(container.querySelectorAll('.journey-detail').map(detail=>detail.id).sort(),expected);
+assert(!choices.some(choice=>['2005','Sin fecha'].includes(choice.textContent)));
+console.log('PASS: pre-2010 and undated records combined under a single < 2010 option.');

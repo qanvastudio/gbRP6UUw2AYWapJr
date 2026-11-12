@@ -21,34 +21,18 @@
             <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -0.2126 -0.7152 -0.0722 0 1"/>
             <feComposite in2="SourceGraphic" operator="in"/>
           </filter>
-          <filter id="emblem-white-red" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -4 0 4 0 0" result="white-emblem"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
-            <feMerge><feMergeNode in="white-emblem"/><feMergeNode in="red-arrow"/></feMerge>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
-          <filter id="emblem-navy-red" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -4 0 4 0 0" result="navy-emblem"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
-            <feMerge><feMergeNode in="navy-emblem"/><feMergeNode in="red-arrow"/></feMerge>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
-          <filter id="logo-original-transparent" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.3189 -1.0728 -0.1083 0 1.5"/>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
           <filter id="brand-transparent" color-interpolation-filters="sRGB">
             <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.25512 0.85824 0.08664 0 -0.2"/>
             <feComposite in2="SourceGraphic" operator="in"/>
           </filter></defs>
         </svg>
 <header class="header">
-      <a class="brand" href="index.html" aria-label="Dr. Tony Bustos, inicio"><img class="brand-logo" src="assets/dr-tony-bustos-logo.webp" alt="Dr. Tony Bustos" width="681" height="313"></a>
+      <a class="brand" href="index.html" aria-label="Dr. Tony Bustos, inicio"><span class="header-seal"><img class="brand-logo" src="assets/footer-tony-seal-white.webp" alt="Dr. Tony Bustos" width="462" height="388"><svg class="header-seal-arrow" viewBox="0 0 462 388" aria-hidden="true" focusable="false"><path fill="#E63950" d="M241 154 268 231 241 196 213 231Z"/></svg></span></a>
       <nav class="nav-pill" aria-label="Navegación principal">
         <a href="doctor.html">Dr. Tony Bustos</a>
         <a href="procedimientos.html">Procedimientos</a>
-        <a href="resultados.html">Resultados</a>
-        <a href="pacientes.html">Pacientes</a>
+        <a href="index.html#contacto">Contacto y ubicación</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
       <div class="header-actions">
         <a class="appointment" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
@@ -58,10 +42,9 @@
         <a href="index.html">Inicio</a>
         <a href="doctor.html">Dr. Tony Bustos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         <a href="procedimientos.html">Procedimientos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="resultados.html">Resultados <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="pacientes.html">Pacientes <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="index.html#contacto">Contacto <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="index.html#contacto">Contacto y ubicación <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         <a href="articulos.html">Artículos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
     </header>
 <main id="contenido" class="page-main">
@@ -69,8 +52,8 @@
 <section id="trajectory-dialog" class="trajectory-page" aria-labelledby="trajectory-title">
     <header class="trajectory-heading">
       <p class="eyebrow">DR. TONY BUSTOS · TRAYECTORIA</p>
-      <h2 id="trajectory-title">Trayectoria y logros<br>del Dr. Tony Bustos</h2>
-      <p>Logros y trayectoria profesional, agrupados por año.</p>
+      <h1 id="trajectory-title">Trayectoria y logros<br>del Dr. Tony Bustos</h1>
+      <p>Formación internacional, alta especialidad y liderazgo clínico: los hitos que definen su trayectoria en cirugía plástica y reconstructiva.</p>
       <a class="page-text-link" href="index.html">← Volver al inicio</a>
     </header>
     <div class="journey-panels" aria-label="Línea de tiempo de la trayectoria"></div>
@@ -90,8 +73,8 @@
         <nav class="footer-nav" aria-label="Navegación del pie de página">
           <a href="doctor.html">Dr. Tony Bustos</a>
           <a href="procedimientos.html">Procedimientos</a>
-          <a href="pacientes.html">Pacientes</a>
-          <a href="index.html#contacto">Contacto</a>
+          <a href="index.html#contacto">Contacto y ubicación</a>
+          <a href="index.html#faq">FAQ</a>
         </nav>
       </div>
       <div class="footer-body">

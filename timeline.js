@@ -2,22 +2,25 @@
  const dialog=document.querySelector('#trajectory-dialog');
  const container=dialog.querySelector('.journey-panels');
  const ns='http://www.w3.org/2000/svg';
- const items=[...window.trajectoryItems].sort((a,b)=>b.year-a.year);
- const years=[...new Set(items.map(item=>item.year))];
+ const groupYear=item=>item.year===null||item.year<2010?2009:item.year;
+ // Preserve the editorial sequence within each displayed year group.
+ const items=[...window.trajectoryItems].sort((a,b)=>groupYear(b)-groupYear(a));
+ const yearLabel=year=>year==='all'?'Todas':Number(year)===2009?'< 2010':String(year);
+ const years=[...new Set(items.map(groupYear))];
  const colors=new Map([...years].reverse().map((year,index)=>[year,`hsl(${(198+index*38/Math.max(1,years.length-1)).toFixed(3)} ${55+(index%3)*10}% ${28+(index%4)*7}%)`]));
  let observer;
  const select=document.createElement('select');select.id='journey-year-filter';select.className='journey-year-select';select.setAttribute('aria-label','Seleccionar año de trayectoria');
- for(const [value,text] of years.map(year=>[String(year),year===null?'Sin fecha':String(year)])){
+ for(const [value,text] of ['all',...years].map(year=>[String(year),yearLabel(year)])){
   const option=document.createElement('option');option.value=value;option.textContent=text;select.append(option);
  }
- select.value=String(years[0]);
+ select.value='all';
  select.hidden=true;
  const picker=document.createElement('details');picker.className='journey-year-picker';
  const trigger=document.createElement('summary');trigger.className='journey-year-trigger';trigger.setAttribute('aria-label','Seleccionar año de trayectoria');
  const menu=document.createElement('div');menu.className='journey-year-options';menu.setAttribute('aria-label','Años disponibles');
  const choices=[];
- for(const year of years){
-  const choice=document.createElement('button');choice.type='button';choice.textContent=year===null?'Sin fecha':String(year);
+ for(const year of ['all',...years]){
+  const choice=document.createElement('button');choice.type='button';choice.textContent=yearLabel(year);
   choice.addEventListener('click',()=>{select.value=String(year);updateYear()});
   choices.push({choice,year});menu.append(choice);
  }
@@ -50,8 +53,9 @@
  function render(){
   if(observer)observer.disconnect();
   container.replaceChildren();
-  const visible=items.filter(item=>String(item.year)===select.value);
+  const visible=items.filter(item=>select.value==='all'||String(groupYear(item))===select.value);
   const panel=document.createElement('div');panel.className='journey-panel';
+  trigger.textContent=yearLabel(select.value);choices.forEach(({choice,year})=>choice.setAttribute('aria-current',String(year)===select.value?'true':'false'));panel.append(picker);
   const track=document.createElement('div');track.className='journey-track';
   const svg=document.createElementNS(ns,'svg');svg.classList.add('journey-line');svg.setAttribute('aria-hidden','true');svg.setAttribute('preserveAspectRatio','none');
   const defs=document.createElementNS(ns,'defs');
@@ -59,13 +63,13 @@
   for(const name of ['outer','middle','inner','core']){const path=document.createElementNS(ns,'path');path.setAttribute('class','flow-'+name);svg.append(path);}
   track.append(svg);
   const groups=new Map();
-  for(const item of visible){const year=item.year||'Sin fecha';if(!groups.has(year))groups.set(year,[]);groups.get(year).push(item);}
+  for(const item of visible){const year=groupYear(item);if(!groups.has(year))groups.set(year,[]);groups.get(year).push(item);}
   let nodeIndex=0;
   for(const [year,items] of groups){
    const group=document.createElement('section');group.className='journey-year';
-   const color=colors.get(year==='Sin fecha'?null:year);group.style.setProperty('--year-color',color);
+   const color=colors.get(year);group.style.setProperty('--year-color',color);
    for(let n=0;n<2;n++){const stop=document.createElementNS(ns,'stop');stop.setAttribute('stop-color',color);gradient.append(stop);}
-   const heading=document.createElement('h3');heading.id='journey-year-'+(items[0].year||'undated');trigger.textContent=select.value==='null'?'Sin fecha':select.value;choices.forEach(({choice,year})=>choice.setAttribute('aria-current',String(year)===select.value?'true':'false'));heading.append(picker);heading.setAttribute('aria-label',String(year));group.setAttribute('aria-labelledby',heading.id);group.append(heading);
+   const heading=document.createElement('h3');heading.id='journey-year-'+year;heading.textContent=yearLabel(year);heading.setAttribute('aria-label',yearLabel(year));group.setAttribute('aria-labelledby',heading.id);group.append(heading);
    const list=document.createElement('ol');list.className='journey-year-list';
    for(const item of items){
     const left=nodeIndex++%2===0;

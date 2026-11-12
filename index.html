@@ -11,16 +11,21 @@
   <script src="hero-loading.js"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="hero-typewriter.js" defer></script>
 </head>
 <body>
+  <div class="site-loader" role="status" aria-live="polite">
+    <span class="sr-only">Cargando sitio</span>
+    <span class="loader-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+  </div>
   <a class="skip" href="#inicio">Ir al contenido</a>
     <header class="header">
-      <a class="brand" href="#inicio" aria-label="Dr. Tony Bustos, inicio"><img class="brand-logo" src="assets/dr-tony-bustos-logo.webp" alt="Dr. Tony Bustos" width="681" height="313"></a>
+      <a class="brand" href="#inicio" aria-label="Dr. Tony Bustos, inicio"><span class="header-seal"><img class="brand-logo" src="assets/footer-tony-seal-white.webp" alt="Dr. Tony Bustos" width="462" height="388"><svg class="header-seal-arrow" viewBox="0 0 462 388" aria-hidden="true" focusable="false"><path fill="#E63950" d="M241 154 268 231 241 196 213 231Z"/></svg></span></a>
       <nav class="nav-pill" aria-label="Navegación principal">
         <a href="#doctor">Dr. Tony Bustos</a>
         <a href="procedimientos.html">Procedimientos</a>
-        <a href="resultados.html">Resultados</a>
-        <a href="#pacientes">Pacientes</a>
+        <a href="#contacto">Contacto y ubicación</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <div class="header-actions">
         <a class="appointment" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
@@ -30,10 +35,9 @@
         <a href="#inicio">Inicio</a>
         <a href="#doctor">Dr. Tony Bustos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         <a href="procedimientos.html">Procedimientos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="resultados.html">Resultados <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="#pacientes">Pacientes <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-        <a href="#contacto">Contacto <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="#contacto">Contacto y ubicación <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         <a href="#articulos">Artículos <span><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a href="#faq">FAQ</a>
       </nav>
     </header>
   <main>
@@ -46,7 +50,7 @@
     <div class="hero-bottom">
       <div class="hero-copy">
         <h1>Tu bienestar,<br>en buenas manos.</h1>
-        <p>Conoce al Dr. Tony Bustos y encuentra información<br class="desktop-break"> para dar el siguiente paso en tu cuidado.</p>
+        <p>El Dr. Tony Bustos te acompaña hacia tu mejor versión,<br class="desktop-break"> con atención cercana y enfocada en tu bienestar.</p>
       </div>
       <a class="consult-card" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><span>Tu primera consulta</span><span class="arrow" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div>
@@ -75,8 +79,8 @@
             <a class="credential-button credential-button-outline" href="doctor.html">Ver formación</a>
           </div>
           <div class="credentials-description">
-            <p><strong>Conoce su preparación.</strong> El Dr. Tony Bustos estudió Medicina en la UNAM y continuó su formación en cirugía general, plástica y reconstructiva.</p>
-            <p><strong>Un paso más en su formación.</strong> Profundizó sus estudios en áreas como la reconstrucción de mama y de oreja. Puedes conocer aquí su preparación y trayectoria antes de tu consulta.</p>
+            <p><strong>Formación sólida, visión internacional.</strong> Médico formado en la UNAM, el Dr. Tony Bustos complementó su preparación en cirugía plástica y reconstructiva con entrenamiento especializado en Taiwán, Japón, Estados Unidos, España y Turquía.</p>
+            <p><strong>Preparación que trasciende fronteras.</strong> Su formación incluye microcirugía reconstructiva en el Chang Gung Memorial Hospital, reconstrucción auricular con el Dr. Satoru Nagata en Japón y cirugía estética y reconstructiva en la Clínica Planas de Barcelona.</p>
           </div>
         </div>
         <article class="kpi-card kpi-experience" aria-labelledby="experience-title">
@@ -93,22 +97,6 @@
         <svg class="credential-filter" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
           <defs><filter id="credential-ink" color-interpolation-filters="sRGB">
             <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -0.2126 -0.7152 -0.0722 0 1"/>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
-          <filter id="emblem-white-red" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -4 0 4 0 0" result="white-emblem"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
-            <feMerge><feMergeNode in="white-emblem"/><feMergeNode in="red-arrow"/></feMerge>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
-          <filter id="emblem-navy-red" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.004 0 0 0 0 0.129 0 0 0 0 0.314 -4 0 4 0 0" result="navy-emblem"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.902 0 0 0 0 0.224 0 0 0 0 0.314 4 0 -4 0 0" result="red-arrow"/>
-            <feMerge><feMergeNode in="navy-emblem"/><feMergeNode in="red-arrow"/></feMerge>
-            <feComposite in2="SourceGraphic" operator="in"/>
-          </filter>
-          <filter id="logo-original-transparent" color-interpolation-filters="sRGB">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.3189 -1.0728 -0.1083 0 1.5"/>
             <feComposite in2="SourceGraphic" operator="in"/>
           </filter>
           <filter id="brand-transparent" color-interpolation-filters="sRGB">
@@ -135,28 +123,28 @@
       </section>
     </div>
   </section>
-  <section id="pacientes" class="faq" aria-labelledby="faq-title">
+  <section id="faq" class="faq" aria-labelledby="faq-title">
     <div class="faq-inner">
       <div class="faq-intro">
         <h2 id="faq-title">Preguntas<br>frecuentes.</h2>
         <p>Resuelve tus dudas antes de tu consulta<br class="faq-break"> con el Dr. Tony Bustos.</p>
       </div>
       <div class="faq-list">
-        <details class="faq-item" name="patient-faq" open>
+        <details class="faq-item" name="site-faq" open>
           <summary>¿Qué puedo preguntar en mi primera consulta?<span class="faq-icon" aria-hidden="true"></span></summary>
           <div class="faq-answer"><p>Puedes compartir tus objetivos y dudas con el Dr. Tony Bustos, y preguntar por las opciones, sus alcances, riesgos y cuidados. La consulta es el espacio para recibir información sobre tu caso antes de tomar una decisión.</p></div>
         </details>
-        <details class="faq-item" name="patient-faq">
+        <details class="faq-item" name="site-faq">
           <summary>¿Cómo me preparo para un procedimiento?<span class="faq-icon" aria-hidden="true"></span></summary>
           <div class="faq-answer"><p>Solicita al consultorio las indicaciones específicas para tu procedimiento y confirma cualquier duda con el Dr. Tony Bustos. La preparación se define de manera individual; esta página no sustituye esas instrucciones.</p></div>
         </details>
-        <details class="faq-item" name="patient-faq">
+        <details class="faq-item" name="site-faq">
           <summary>¿Cuánto tiempo debo reservar para recuperarme?<span class="faq-icon" aria-hidden="true"></span></summary>
           <div class="faq-answer"><p>Pregunta durante la valoración por el tiempo estimado de recuperación, el seguimiento y el regreso a tus actividades. No se establece un plazo único aquí: necesitarás una orientación específica para el procedimiento y tu situación.</p></div>
         </details>
-        <details class="faq-item" name="patient-faq">
+        <details class="faq-item" name="site-faq">
           <summary>¿Cómo puedo agendar con el Dr. Tony Bustos?<span class="faq-icon" aria-hidden="true"></span></summary>
-          <div class="faq-answer"><p>Consulta la ubicación en Hospital San Ángel Inn Universidad y el horario de atención, de lunes a viernes de 9:00 a. m. a 6:00 p. m., en la sección de contacto. El teléfono mostrado es provisional; la agenda telefónica estará disponible cuando se confirme el número del consultorio.</p><a href="#contacto">Ver información de contacto <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
+          <div class="faq-answer"><p>Consulta la ubicación en Hospital San Ángel Inn Universidad y el horario de atención, de lunes a viernes de 9:00 a. m. a 6:00 p. m., en la sección de contacto. Escríbenos por WhatsApp al 55 7946 8246 para solicitar tu consulta.</p><a href="#contacto">Ver información de contacto <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
         </details>
       </div>
     </div>
@@ -171,19 +159,19 @@
         <article class="article-card">
           <a href="articulo-consulta.html" aria-labelledby="article-consulta-title">
             <img class="article-photo article-photo-consulta" src="assets/article-1.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
-            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-consulta-title">Cómo preparar tus preguntas para la primera consulta</h3></div>
+            <div class="article-caption"><h3 id="article-consulta-title">Cómo preparar tus preguntas para la primera consulta</h3></div>
           </a>
         </article>
         <article class="article-card">
           <a href="articulo-credenciales.html" aria-labelledby="article-credenciales-title">
             <img class="article-photo article-photo-credenciales" src="assets/article-2.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
-            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-credenciales-title">Formación y credenciales: qué preguntar a tu médico</h3></div>
+            <div class="article-caption"><h3 id="article-credenciales-title">Formación y credenciales: qué preguntar a tu médico</h3></div>
           </a>
         </article>
         <article class="article-card">
           <a href="articulo-acompanamiento.html" aria-labelledby="article-acompanamiento-title">
             <img class="article-photo article-photo-acompanamiento" src="assets/article-3.webp" alt="" width="640" height="640" loading="lazy" decoding="async">
-            <div class="article-caption"><span class="article-status">Borrador editorial</span><h3 id="article-acompanamiento-title">Cómo organizar tus dudas y tu acompañamiento</h3></div>
+            <div class="article-caption"><h3 id="article-acompanamiento-title">Cómo organizar tus dudas y tu acompañamiento</h3></div>
           </a>
         </article>
       </div>
@@ -196,12 +184,10 @@
         <h2 id="contact-title">Contacto<br>y ubicación.</h2>
         <p class="contact-intro">Da el siguiente paso.<br>Conoce dónde encontrarnos.</p>
         <dl class="contact-details">
-          <div><dt>Ubicación</dt><dd>Hospital San Ángel Inn Universidad</dd></div>
+          <div><dt>Ubicación</dt><dd class="contact-location"><span class="contact-hospital">Hospital San Ángel Inn Universidad</span><a class="contact-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20San%20%C3%81ngel%20Inn%20Universidad" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span><span class="sr-only"> (abre Google Maps en otra pestaña)</span></a></dd></div>
           <div><dt>Horario de atención</dt><dd>Lunes a viernes<br><span>9:00 a. m. a 6:00 p. m.</span></dd></div>
-          <div><dt>Teléfono</dt><dd><span class="contact-phone">55 0000 0000</span><small>Número provisional · No habilitado para llamadas</small></dd></div>
+          <div><dt>Teléfono</dt><dd><a class="contact-phone" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer" aria-label="Contactar al Dr. Tony Bustos por WhatsApp al 55 7946 8246">55 7946 8246</a><a class="contact-whatsapp" href="https://wa.me/5215579468246" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp <svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></dd></div>
         </dl>
-        <a class="contact-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20San%20%C3%81ngel%20Inn%20Universidad" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span><span class="sr-only"> (abre Google Maps en otra pestaña)</span></a>
-        <p class="contact-appointment-note">La agenda telefónica estará disponible cuando se confirme el número del consultorio.</p>
       </div>
       <div class="contact-map">
         <iframe title="Ubicación de Hospital San Ángel Inn Universidad en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30112.773170212215!2d-99.18317764667975!3d19.364967483963543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc02630ca59%3A0xecc9a8d0ed644d36!2sHospital%20San%20%C3%81ngel%20Inn%20Universidad!5e0!3m2!1ses-419!2smx!4v1792884330136!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -223,8 +209,8 @@
         <nav class="footer-nav" aria-label="Navegación del pie de página">
           <a href="#doctor">Dr. Tony Bustos</a>
           <a href="procedimientos.html">Procedimientos</a>
-          <a href="#pacientes">Pacientes</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#contacto">Contacto y ubicación</a>
+          <a href="#faq">FAQ</a>
         </nav>
       </div>
       <div class="footer-body">
@@ -255,3 +241,6 @@
   </footer>
 </body>
 </html>
+
+
+
